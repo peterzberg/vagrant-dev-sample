@@ -1,0 +1,13 @@
+- name: Ensure workspace directory exists
+  file: path={{ workspace }} state=directory owner=vagrant
+
+- name: Update apt cache
+  apt: update_cache=yes cache_valid_time=86400
+  when: ansible_os_family == 'Debian'
+
+- name: Ensure git is installed
+  apt:
+    name: "{{ item }}"
+    state: installed
+  with_items: "{{ git_packages }}"
+  when: ansible_os_family == 'Debian'

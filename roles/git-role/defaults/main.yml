@@ -1,0 +1,9 @@
+---
+workspace: /home/vagrant/git
+
+git_enablerepo: ""
+git_packages:
+  - git
+
+git_install_path: "/usr"
+git_version: "2.9.3"

@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  roles:
+    - oracle-java-role
+    - git-role
+    - docker-role
+    - nodejs-role
+    - sublimetext-role
+    - intellij-role

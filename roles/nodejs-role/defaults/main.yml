@@ -1,0 +1,4 @@
+---
+nodejs_version: 6.x
+nodejs_packages:
+  - gulp
