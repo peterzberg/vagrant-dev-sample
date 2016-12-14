@@ -23,8 +23,12 @@ For the creation and configuration of the reproducible and portable development 
 - ansible_local (that's why the roles are checked in)
 
 # Getting up and running
-Goal: 
+Clone repository first, then
+
 ```
 vagrant up
 ```
-Not working at the moment of writing. The base image has to be uploaded somewhere first to be accessable from remote.
+
+## Preconditions:
+- Vagrant installed
+- Virtualbox installed
