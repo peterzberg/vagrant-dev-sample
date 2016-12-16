@@ -11,9 +11,8 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
     vb.gui = true
-
-    # Customize the amount of memory on the VM:
-    vb.memory = "6040"
+    vb.customize ["modifyvm", :id, "--memory", "6144"]
+    vb.customize ["modifyvm", :id, "--cpus", "2"]
   end
 
   config.vm.provision "ansible_local" do |ansible|
