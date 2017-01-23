@@ -29,6 +29,17 @@ Clone repository first, then
 vagrant up
 ```
 
+Attention: unfortunately the box is not configured as it should be :-( I should have disabled default system updates in ubuntu. [BUG](https://github.com/boxcutter/ubuntu/issues/73)
+
+# Getting up and running until the bug is fix
+```
+vagrant up --no-provision
+```
+wait until no apt-process is running, then
+```
+vagrant up --provision
+```
+
 ## Preconditions:
 - Vagrant installed
 - Virtualbox installed
